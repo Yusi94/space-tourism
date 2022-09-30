@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/tabs.js" defer></script>
+    <script src="./scripts/technology.js" defer></script>
+
+    <title>Technology</title>
+</head>
+<body class="technology">
+    <a href="#main" class="skip-to-content">Skip to content</a>  
+    <header class="header flex">
+      <div>
+        <img src="./assets/shared/logo.svg" alt="logo" class="logo">
+      </div>
+      <!-- can add a pseudo element to the header as well -->
+      <div class="line bg-white"></div>
+      <button class="menu-nav-toggle" aria-controls="nav__list" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="nav">
+        <ul data-visible="false" id="nav__list" class="nav__list underline-indicators flex">
+          <li class="nav__item ff-sans-cond uppercase letter-spacing-2">
+            <a class="nav__link" href="index.html">
+              <span aria-hidden="true">00</span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav__item ff-sans-cond uppercase letter-spacing-2">
+            <a href="destination.html">
+              <span aria-hidden="true">01</span>
+              <span>Destination</span>
+            </a>
+          </li>
+          <li class="nav__item ff-sans-cond uppercase letter-spacing-2">
+            <a href="crew.html">
+              <span aria-hidden="true">02</span>
+              <span>Crew</span>
+            </a>
+          </li>
+          <li class="active nav__item ff-sans-cond uppercase letter-spacing-2">
+            <a href="technology.html">
+              <span aria-hidden="true">03</span>
+              <span>Technology</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--technology">
+
+        <h1 class="numbered-title"><span aria-hidden="true">03</span>Space launch 101</h1>
+        
+        <picture class="technologies">
+            <source media="(max-width: 63.99em)" srcset="./assets/technology/image-launch-vehicle-landscape.jpg" type="image/jpeg">
+            <source media="(min-width: 64em)" srcset="./assets/technology/image-launch-vehicle-portrait.jpg" type="image/jpeg">
+            <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="launch vehicle">
+        </picture>
+            
+        <div class="sliders-2 flex" role="tablist" aria-label="Sliders" style="--gap: 1.5rem">
+            <button id="launch-vehicle" role="tab" class="ff-serif text-white" aria-selected="true">1</button>
+            <button id="spaceport" role="tab" class="ff-serif text-white" aria-selected="false" >2</button>
+            <button id="space-capsule" role="tab" class="ff-serif text-white" aria-selected="false" >3</button>
+        </div>
+
+        <article class="technology-info vertical-spacing">
+            <header>
+                <h2 class="ff-sans-cond fs-600 text-light uppercase letter-spacing-3">The terminology...</h2>
+                <p class="name ff-serif fs-700 uppercase">Launch vehicle</p>
+            </header>
+            <p class="description text-light">
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space,
+                usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+                it's quite an awe-inspiring sight on the launch pad!
+            </p> 
+        </article>
+       
+    </main>
+</body>
+</html>
